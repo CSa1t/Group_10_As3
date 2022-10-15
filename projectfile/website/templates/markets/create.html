@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+      <!--Breadcrumbs for navigation-->
+      <nav>
+        <ol class="breadcrumb" id="breadc">
+              <li class="breadcrumb-item"><a href={{url_for('main.index')}}>Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Create Event</li>
+        </ol>
+        </nav>
+    <div class="dropdown show">
+</section>  
+<!--Title and filter--> 
+<section id="main">
+  <div class="row">
+    <div class="col">
+     <a class="btn btn-secondary btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       Your Events </a>
+       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="booking.html">Booking History</a>
+          <a class="dropdown-item" href="#">Update Your Events</a>
+        </div>
+    </div>
+  <div class="col-9">
+
+  {% endblock %}
+
+  {% block content %}   
+    
+
+<!--Event Creation Form-->
+<form>
+  <div><h2>Create Your Event - #421</h2></div>
+  <div class="row">
+    <div class="col" id="evendesc">
+      <label for="Event-name">Event Name *</label>
+      <input type="text" class="form-control" placeholder="E.g: Friday Fruit Market...">
+    </div>
+    <div class="col" id="evendesc">
+      <label for="inputState">Event Type *</label>
+        <select id="inputState" class="form-control">
+          <option selected>Choose a Category</option>
+            <option>Fruits & Vegetables</option>
+            <option> Meats </option>
+            <option>Wine / Drinks</option>
+            <option>Dairy</option>
+        </select>
+    </div>
+    <div class="col" id="evendesc">
+      <label for="Event-date">Date *</label>
+      <input type="text" class="form-control" placeholder="E.g: 30th November 2022">
+    </div>
+  </div>
+</form>
+<form>
+  <div class="row">
+    <div class="col" id="evendesc">
+      <label for="Event-location">Location *</label>
+      <input type="text" class="form-control" placeholder="Type Location...">
+    </div>
+    <div class="col" id="evendesc">
+      <label for="Event-venue">Venue *</label>
+      <input type="text" class="form-control" placeholder="Type Venue...">
+    </div>
+  </div>
+  <div class="col" id="evendesc">
+    <label for="Event-description">Event Description *</label>
+    <textarea class="col" placeholder="Describe Your Event..." required></textarea>
+  </div>
+</form> 
+<form>
+  <div class="row">
+    <div class="col" id="evendesc">
+      <label for="inputState">Event Status *</label>
+        <select id="inputState" class="form-control">
+          <option selected>Choose a Category</option>
+            <option>Upcoming</option>
+            <option> Inactive </option>
+            <option>Cancelled</option>
+            <option>Booked</option>
+        </select>
+    </div>
+    <div class="col" id="evendesc">
+    <label for="inputState">Add Event Image/s:</label>
+    <div class="custom-file">
+        <input type="file" class="custom-file-input">
+        <label class="custom-file-label">Choose Image</label>
+      </div>
+    </div>
+   </div>
+    <div class="row">
+      <div class="col" id="evendesc">
+        <label for="Event-location">Number of Event Tickets *</label>
+          <div class="input-group-prepend">
+            <span class="input-group-text">000</span>
+            <input type="text" class="form-control" placeholder="E.g: 300...">
+          </div> 
+      </div>  
+        <div class="col" id="evendesc">
+          <label for="Event-location">Price Per Ticket *</label>
+          <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+            <span class="input-group-text">0.00</span>
+            <input type="text" class="form-control" placeholder="E.g: 4.00">
+          </div> 
+        </div>
+    </div>
+    <div>
+      <button type="button" class="btn btn-secondary btn-lg btn-block">Create Event!</button>
+    </div>
+</form>
+</div>
+   <div class="col">
+ </div>
+ </div>  
+    </section>     
+  </body>
+
+  {% endblock %}
