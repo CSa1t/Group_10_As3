@@ -42,8 +42,8 @@
         </div>
         <div class="col" id="evendesc">
           <div class="form-group">
-            {{ form.name.label }}
-            {{ form.name(class_="form-control") }}
+            {{ form.date.label }}
+            {{ form.date(class_="form-control") }}
         </div>
         </div>
       </div>
@@ -88,18 +88,20 @@
         <div class="row">
           <div class="col" id="evendesc">
             <div class="form-group">
-              {{ form.currency.label }}
-              {{ form.currency(class_="form-control") }}
+              {{ form.price.label }}
+              {{ form.price(class_="form-control") }}
           </div>
           </div>  
             <div class="col" id="evendesc">
               <div class="form-group">
-                {{ form.currency.label }}
-                {{ form.currency(class_="form-control") }}
+                {{ form.booking.label }}
+                {{ form.booking(class_="form-control") }}
             </div> 
             </div>
         </div>
+        <div id=".button-create">
         {{ form.submit(class_="form-control") }}
+         </div>
     </form>
   </div>
   <div class="col">
