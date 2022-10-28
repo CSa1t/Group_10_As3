@@ -103,58 +103,65 @@
 </div>
 </section> 
 <!--Comments and user comment ability-->
-<section>
-  <div class="row">
-    <div class="col">
-    </div>
-    <div class="col-9">
-      <div class="row">
-        <h2>Comments Section</h2>
-        <p>2</p>
-      </div>
-      <div class="box">  
-        <div class="d-flex flex-column bd-highlight">
-        <div class="card-group">
-          <div class="card" id="bookt">
-            <!--Image from Pexels: Andre Furtado-->
-            <img class="card-img-top" id="compro" src="..\static\Images\profile1.jpeg" width="110" height="210">
-            <div class="card-body">
-              <h6 class="fw-bold mb-1">Emily Trinston</h6>
-              <p class="text-muted small mb-0">
-                Posted - 22nd May 2022 </p>          
-                <p class="card-text">Super excited for this months market! Highly recommend the $2 fruit bowls :)</p>
-            </div>
-          </div>
-          <div class="card" id="bookt">
-            <!--Image from Pexels:Leonardo Aleixo Pires -->
-            <img class="card-img-top" id="compro" src="..\static\Images\profile2.webp" width="110" height="210">
-            <div class="card-body">
-              <h6 class="fw-bold mb-1">Jane K.</h6>
-              <p class="text-muted small mb-0">
-                Posted - 25th August 2022 </p>          
-                <p class="card-text">Are dogs allowed at the market?</p>
-            </div>
-          </div>
-          <div class="card" id="bookt">
-            <img class="card-img-top" id="compro" src="..\static\Images\2524742-200.png"width="100" height="250">
-            <div class="card-body">
-              <div class="form-outline w-100">
-                <textarea class="form-control" id="textAreaExample" rows="3"
-                  style="background: #fff;" placeholder="Write Your Comment..."></textarea>
-                  <div class="float-end mt-2 pt-1">
-                    <button type="button" class="btn btn-dark btn-sm">Post comment</button>
-                  </div>
-                </div>
+<div class="container mb-5 mt-5">
+  <div class="card">
+ <div class="row">
+   <div class="col-md-12">
+     <h3 class="text-center mb-5">
+       Event Reviews
+     </h3>
+     <div class="row">
+       <div class="col-md-12">
+         <div class="media">
+           <img class="mr-3 rounded-circle" src="..\static\Images\profile1.jpeg" height="90px" width="90px"/>
+           <div class="media-body">
+             <div class="row">
+              <div class="col-8 d-flex">
+                 <h5>Mary J.</h5>
               </div>
+              <div class="col-4">
+              <div class="pull-right reply">
+             <a><span><i class="fa fa-reply"></i> 02/08/2022</span></a>
+              </div>
+              </div>
+             </div>	Great event! Prices were affordable and venue was pet freindly.                              
+           </div>
+         </div>
+         </div>
+         <div class="col-md-12">
+          <div class="media">
+            <img class="mr-3 rounded-circle" src="..\static\Images\profile2.webp" height="90px" width="90px"/>
+            <div class="media-body">
+              <div class="row">
+               <div class="col-8 d-flex">
+                  <h5>Lex S.</h5>
+               </div>
+               <div class="col-4">
+               <div class="pull-right reply">
+              <a><span><i class="fa fa-reply"></i> 10/08/2022</span></a>
+               </div>
+               </div>
+              </div>	Highly reccomend this event!                              
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-    </div>
-  </div>
-</section>
+        </div> 
+      <!--Will be redone with WTForms-->
+      <div class="col-md-12">
+         <div class="media">
+          <a class="pr-3"><img class="rounded-circle" src="..\static\Images\person-circle.svg" height="90" width="90"/></a>
+         <div class="media-body">
+          <div class="row border-bottom"> 
+            <input class="form-control" aria-describedby="Comment" placeholder="Write a Review">
+            <button type="button" class="btn btn-secondary">Submit</button>
+          </div>
+          </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ </div>
+</div>
 </body>
  
 {% endblock %}
