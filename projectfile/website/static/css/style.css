@@ -67,3 +67,7 @@
 #evendesc2{
     background-color: rgb(240, 249, 243);
 }
+.media{
+    background-color: rgba(144, 169, 141, 0.093);
+    border-radius: 15px;
+}
