@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% import "bootstrap/form.html" as wtf %}
+
+{% block content %}
+<!--First grid system containing 3 columns-->
+<section>
+    <div class="row">
+      <div class="col">
+        <a class="btn btn-secondary btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Event Filter </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+         <a class="dropdown-item" href="#h2-0">Fruits & Vegetables</a>
+         <a class="dropdown-item" href="#h2-1">Meats</a>
+         <a class="dropdown-item" href="#h2-2">Wine / Drinks</a>
+         <a class="dropdown-item" href="#h2-3">Dairy</a>
+     </div>
+    </div>
+    <div class="column-9">
+      <h1>Upcoming Events!</h1>
+    </div>
+    <div class="col">
+    </div>
+  </section>
+</div>
+<div class="col">
+</div>
+</div>
+</section>
+</body>
+
+<div class="container">  
+
+<!-- Destination --> 
+<div class="row">  
+<div class="col-md-12">  
+<div class="card my-3">  
+  <div class="card-body">  
+    <div class="media">  
+      <img class="align-self-start mr-3" src="{{market.image}}">  
+      <div class="media-body">  
+        <small class="font-weight-bold text-muted">Stay 2 nights</small>  
+        <h5 class="mt-0">{{market.name}}</h5>  
+        <p>{{market.description}}</p>  
+        <a href="#" class="btn btn-danger">Book Now</a>  
+      </div>  
+    </div>  
+  </div>  
+</div>  
+</div>  
+</div>     
+<hr>  
+</div> 
+
+  <!--3 Column main section-->
+  <section id="main">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-9">
+  <!--Event title and post information-->
+          <div class="row">
+            <h2 id="h2-0">Friday's Fresh Fruits Event</h2>
+          <div class="row">
+          <img src="..\static\Images\person-circle.svg" width="40" height="40" class="d-inline-block align-middle">
+            <p>Sarah Tradin</p> <img src="..\static\Images\clock.svg" width="40" height="40" class="d-inline-block align-middle" alt="">
+              <p>28th August 2022</p> <img src="..\static\Images\tag.svg" width="40" height="40" class="d-inline-block align-middle" alt="">
+                <p>Fruits & Vegetables</p> <img src="..\static\Images\activity.svg" width="40" height="40" class="d-inline-block align-middle" alt=""> <p>Upcoming</p>
+          </div>
+          </div>
+  <!--Collapsable description-->
+          <section>
+            <div id="accordion">
+              <div class="card-1">
+                <div class="card-header">
+                  <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                    Event Description
+                  </a>
+                </div>
+                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                  <div class="card-body">
+                    Septembers Fresh Fruits event, located in rochdale south, presents over 20 fruit farmers and thier goods. Including family freindly entertainment, music and meals.
+                  </div>
+                  <div class="box">
+                    <!--Image from Pexels: Mark Stebnicki-->
+                    <img id="showcase" src="..\static\Images\Vegies.jpeg" width="330" height="190">
+                    <!--Image from Pexels: Kamaji Ogino-->
+                    <img id="showcase" src="..\static\Images\fruitshop.jpeg" width="330" height="190">
+                    <button  class="btn-lg btn-secondary"><a class="text-white" href={{url_for('main.eventdetails')}}>Click for Event</a></button>
+                  </div>
+                </div>
+              </div>
+          </section>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+  </section>
+
+        </div>
+        <div class="col">
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
