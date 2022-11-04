@@ -1,2 +1,2 @@
 # iab207 Assignment 3
-Group Members:
+Group Members: 3
