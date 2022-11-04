@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% import "bootstrap/form.html" as wtf %}
+
+{% block content %}
+<section>
+      <!--Breadcrumbs for navigation-->
+      <nav>
+        <ol class="breadcrumb" id="breadc">
+              <li class="breadcrumb-item"><a href={{url_for('main.index')}}>Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Create Event</li>
+        </ol>
+        </nav>
+    <div class="dropdown show"></div>
+</section>  
+<!--Title and filter--> 
+<section id="main">
+  <div class="row">
+    <div class="col">
+     <a class="btn btn-secondary btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       Your Events </a>
+       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href={{url_for('main.booking')}}>Booking History</a>
+        </div>
+    </div>
+  <div class="col-9">
+    <form action="{{ url_for('market.create') }}" method="post" novalidate>
+      <div><h2>Create Your Event - #421</h2></div>
+      <div class="row">
+        <div class="col" id="evendesc">
+          <div class="form-group">
+            {{ form.name.label }}
+            {{ form.name(class_="form-control") }}
+        </div>
+        </div>
+        <div class="col" id="evendesc">
+          <div class="form-group">
+            {{ form.type.label }}
+            {{ form.type(class_="form-control") }}
+        </div>
+        </div>
+        <div class="col" id="evendesc">
+          <div class="form-group">
+            {{ form.date.label }}
+            {{ form.date(class_="form-control") }}
+        </div>
+        </div>
+      </div>
+    </form>
+    <form action="{{ url_for('market.create') }}" method="post" novalidate>
+      <div class="row">
+        <div class="col" id="evendesc">
+          <div class="form-group">
+            {{ form.location.label }}
+            {{ form.location(class_="form-control") }}
+        </div>
+        </div>
+        <div class="col" id="evendesc">
+          <div class="form-group">
+            {{ form.venue.label }}
+            {{ form.venue(class_="form-control") }}
+        </div>
+        </div>
+      </div>
+      <div class="col" id="evendesc">
+        <div class="form-group">
+          {{ form.description.label }}
+          {{ form.description(class_="form-control") }}
+      </div>
+      </div>
+    </form> 
+    <form action="{{ url_for('market.create') }}" method="post" novalidate>
+      <div class="row">
+        <div class="col" id="evendesc">
+          <div class="form-group">
+            {{ form.status.label }}
+            {{ form.status(class_="form-control") }}
+        </div>
+        </div>
+        <div class="col" id="evendesc">
+          <div class="form-group">
+            {{ form.image.label }}
+            {{ form.image(class_="form-control") }}
+        </div>
+        </div>
+       </div>
+        <div class="row">
+          <div class="col" id="evendesc">
+            <div class="form-group">
+              {{ form.price.label }}
+              {{ form.price(class_="form-control") }}
+          </div>
+          </div>  
+            <div class="col" id="evendesc">
+              <div class="form-group">
+                {{ form.booking.label }}
+                {{ form.booking(class_="form-control") }}
+            </div> 
+            </div>
+        </div>
+        <div id=".button-create">
+        {{ form.submit(class_="form-control") }}
+         </div>
+    </form>
+  </div>
+  <div class="col">
+  </div>
+  </div>
+  </section> 
+
+    {% endblock %}

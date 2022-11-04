@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+      <!--Breadcrumbs for navigation-->
+      <nav>
+        <ol class="breadcrumb" id="breadc">
+              <li class="breadcrumb-item"><a href={{url_for('main.index')}}>Home</a></li>
+              <li class="breadcrumb-item"><a href={{url_for('market.create')}}>Create Event/Profile</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Create Event</li>
+        </ol>
+        </nav>
+    <div class="dropdown show">
+</section> 
+    <!--Page title centered with 3 column grid-->
+    <section>
+      <div class="row">
+        <div class="col">
+        </div>
+        <div class="column-9">
+          <h1>Booking History</h1>
+        </div>
+        <div class="col">
+        </div>
+    </section>
+
+    {% endblock %}
+
+    {% block content %}
+
+    <!--Past Event a User has attended-->
+    <section>
+      <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-10">
+          <div class="row">
+            <h2>June's Juice Tasteing</h2>
+          <div class="row">
+          <img src="..\static\Images\person-circle.svg" width="40" height="40" class="d-inline-block align-middle">
+            <p>Joe Vean</p> <img src="..\static\Images\clock.svg" width="40" height="40" class="d-inline-block align-middle" alt="">
+              <p>3rd June 2021</p> <img src="..\static\Images\tag.svg" width="40" height="40" class="d-inline-block align-middle" alt="">
+                <p>Wine & Drinks</p> <img src="..\static\Images\activity.svg" width="40" height="40" class="d-inline-block align-middle" alt=""> <p>Inactive</p>
+          </div>
+          </div>
+       <div class="row">
+         <div class="col" id="evendesc">
+            <div class="card"  id="evendesc2">
+              <div class="card-body">
+                <h4><b>Event Description:</b></h4><br>On the 3rd of June come along to taste our wide variety of homemade Juices!
+                  <div class="box">
+                    <!--Image from Pexels: Toni Cuenca-->
+                    <img id="showcase" src="..\static\Images\drink.jpeg" width="330" height="190">
+                  </div>
+              </div>
+            </div>
+            </div>
+          <div class="col" id="evendesc">
+            <div class="card"  id="evendesc2">
+              <div class="card-body">
+                 <h4><b>Booking Details:</b></h4><br><b>Order ID: </b> JJT24831 <br><b> Booking Date:</b> 24th May 2021
+                 <br><b>Host:</b> Joe Vean <br><b>Status:</b> Event Completed / Inactive<br><b>Tickets Purchased:</b> 2
+              </div>
+            </div>
+          </div>          
+        </div> 
+      </div>
+        <div class="col">
+        </div>
+      </div>
+    </section>
+    <!--Past event a user has attended-->  
+    <section>
+      <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-10">
+          <div class="row">
+            <h2>Sunday Farmers Market</h2>
+          <div class="row">
+          <img src="..\static\Images\person-circle.svg" width="40" height="40" class="d-inline-block align-middle">
+            <p>Keegan H, Roslind B.</p> <img src="..\static\Images\clock.svg" width="40" height="40" class="d-inline-block align-middle" alt="">
+              <p>9th May 2021</p> <img src="..\static\Images\tag.svg" width="40" height="40" class="d-inline-block align-middle" alt="">
+                <p>Dairy</p> <img src="..\static\Images\activity.svg" width="40" height="40" class="d-inline-block align-middle" alt=""> <p>Inactive</p>
+          </div>
+          </div>
+       <div class="row">
+         <div class="col" id="evendesc">
+            <div class="card"  id="evendesc2">
+              <div class="card-body">
+                <h4><b>Event Description:</b></h4><br>Come down this Sunday to get the best bargins on this weeks farmers produce!
+                  <div class="box">
+                    <!--Image from Pexels: RODNAE Productions-->
+                    <img id="showcase" src="..\static\Images\fruit2.jpeg" width="330" height="190">
+                  </div>
+              </div>
+            </div>
+            </div>
+          <div class="col" id="evendesc">
+            <div class="card"  id="evendesc2">
+              <div class="card-body">
+                 <h4><b>Booking Details:</b></h4><br><b>Order ID: </b> SFM2953 <br><b> Booking Date:</b> 29th April 2021
+                 <br><b>Host:</b> Keegan H, Roslind B. <br><b>Status:</b> Event Completed / Inactive<br><b>Tickets Purchased:</b> 4
+              </div>
+            </div>
+          </div>          
+        </div> 
+      </div>
+        <div class="col">
+        </div>
+      </div>
+    </section>  
+    </body>
+
+    {% endblock %}
