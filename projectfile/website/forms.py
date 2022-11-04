@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from flask_wtf import FlaskForm
 from wtforms.fields import TextAreaField, SubmitField, StringField, PasswordField, SelectField, DateField, FileField, DecimalField, IntegerField
 from flask_wtf.file import FileField, FileRequired, FileAllowed
-from wtforms.validators import InputRequired, Length, Email, EqualTo, NumberRange
+from wtforms.validators import InputRequired, Length, Email, EqualTo, NumberRange, DataRequired
 from flask_login import login_required, current_user
 
 #Create new event
