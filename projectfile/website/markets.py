@@ -14,14 +14,17 @@ def show(id):
 
 @bp.route('/create', methods = ['GET', 'POST'])
 def create():
-  print('Method type: ', request.method)
-  form = MarketForm(request.form)
+  form = MarketForm()
+  
   print("form created")
   if form.validate_on_submit() == False:
-    print("Form was filled incorrectly")
+    print("Form was filled wrong")
+    print(form.name.data, form.type.data, form.status.data, form.location.data, form.venue.data, form.date.data, form.image.data, form.price.data, form.booking.data, form.description.data)
     
   if form.validate_on_submit():
-    market = Create(
+    print("Form was filled right")
+
+    market = Create(      
     name = form.name.data, 
     type = form.type.data, 
     status = form.status.data,
@@ -31,8 +34,7 @@ def create():
     image = form.image.data, 
     price = form.price.data, 
     booking = form.booking.data,
-    description = form.description.data
-    )
+    description = form.description.data)
 
     # add the object to the db session
     db.session.add(market)
