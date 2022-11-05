@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% block content %}   
+
+<div class="row">
+    <div class="col">
+    </div>
+    <div class="col-9">
+
+        <section>
+            <div id="accordion">
+              <div class="card-1">
+                <div class="card-header">
+                  <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                    <b>Error: Unavalible!</b>
+                  </a>
+                </div>
+                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                  <div class="card-body">
+                    Error - This event has passed or is sold out and is now unavalible for booking. <br>If you have any queries about this
+                    event please contact the event creator <a href="mail.google.com">@...Gmail.com</a> 
+                    <br>Click here to go back to <a href={{url_for('main.index')}}>Home Page.</a>
+                  </div>
+                </div>
+              </div>
+          </section>
+
+    </div>
+    <div class="col">
+    </div>
+</div>
+
+{% endblock %}
