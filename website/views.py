@@ -10,6 +10,9 @@ mainbp = Blueprint('main', __name__)
 def index():
     return render_template('index.html')
 
+@mainbp.route('/eventdetails2')
+def eventdetails2():
+    return render_template('markets/eventdetails2.html')
 
 @mainbp.route('/eventdetails')
 def eventdetails():
